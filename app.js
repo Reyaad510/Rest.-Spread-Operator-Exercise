@@ -35,4 +35,17 @@ console.log(mergeObjects({ a: 1, b: 2 }, { c: 3, d: 4 }));
 
 // doubleAndReturnArgs
 
+const doubleAndReturnArgs = (arr, ...args) => {
+  let nums = [...args];
+
+  const doubled = nums.map((num) => {
+    return num * 2;
+  });
+
+  return [...arr, ...doubled];
+};
+
+console.log(doubleAndReturnArgs([1, 2, 3], 4, 4));
+console.log(doubleAndReturnArgs([2], 10, 4));
+
 // Slice and Dice!

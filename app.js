@@ -16,3 +16,17 @@ const filterOutOdds = (...arg) => {
 };
 
 console.log(filterOutOdds(1, 22, 17, 10, 192, 928732, 1213));
+
+// findMin
+
+const findMin = (...args) => {
+  return Math.min(...args);
+};
+
+console.log(findMin(89, 30, 200, 21, 8, 29));
+
+// mergeObjects
+
+// doubleAndReturnArgs
+
+// Slice and Dice!

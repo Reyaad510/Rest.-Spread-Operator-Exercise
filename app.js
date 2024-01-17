@@ -88,8 +88,17 @@ const removeKey = (obj, key) => {
 removeKey({ band: 1, song: 5, tracks: 3 }, "song");
 /** Combine two objects and return a new object. */
 
-function combine(obj1, obj2) {}
+const combine = (obj1, obj2) => {
+  return { ...obj1, ...obj2 };
+};
 
 /** Return a new object with a modified key and value. */
 
-function update(obj, key, val) {}
+const update = (obj, key, val) => {
+  return {
+    ...obj,
+    [key]: val,
+  };
+};
+
+console.log(update({ rat: 2, cat: 1, bird: 8 }, "bird", 10));

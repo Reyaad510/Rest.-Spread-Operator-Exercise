@@ -79,8 +79,13 @@ addKeyVal({ rat: 1, mouse: 3 }, "roach", 4);
 
 /** Return a new object with a key removed. */
 
-function removeKey(obj, key) {}
+const removeKey = (obj, key) => {
+  // Destructure obj to remove key
+  const { [key]: val, ...restOfObject } = obj;
+  return restOfObject;
+};
 
+removeKey({ band: 1, song: 5, tracks: 3 }, "song");
 /** Combine two objects and return a new object. */
 
 function combine(obj1, obj2) {}

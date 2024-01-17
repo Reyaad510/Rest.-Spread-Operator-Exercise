@@ -66,12 +66,16 @@ const extend = (array1, array2) => {
   return [...array1, ...array2];
 };
 
-console.log(extend([1, 2], [5, 6]));
+extend([1, 2], [5, 6]);
 
 /** Return a new object with all the keys and values
 from obj and a new key/value pair */
 
-function addKeyVal(obj, key, val) {}
+const addKeyVal = (obj, key, val) => {
+  return { ...obj, [key]: val };
+};
+
+addKeyVal({ rat: 1, mouse: 3 }, "roach", 4);
 
 /** Return a new object with a key removed. */
 
